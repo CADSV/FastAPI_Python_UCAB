@@ -2,7 +2,7 @@
 from typing import List
 from sqlalchemy.orm import Session
 from models.track_model import TrackModel
-from schemas.album_schema import TrackSchema
+from schemas.track_schema import TrackSchema
 
 
 # Album Repository: Use for the Album Repository

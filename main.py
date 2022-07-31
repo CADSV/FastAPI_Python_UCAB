@@ -2,6 +2,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from config_db import Base, engine
+from controllers.album_routes_controller import router as album_router
 
 
 # get_application: returns a FastAPI application
@@ -32,7 +33,7 @@ def get_application()  -> FastAPI:
     # add the routes
 
     # app.include_router(artist_router, prefix="/music-store/api/v1")
-	# app.include_router(album_router, prefix="/music-store/api/v1")
+    app.include_router(album_router, prefix="/music-store/api/v1")
 	# app.include_router(track_router, prefix="/music-store/api/v1")
     return app
 

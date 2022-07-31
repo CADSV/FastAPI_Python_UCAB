@@ -23,7 +23,7 @@ class ArtistRepository:
 
 
     # Get all the almbus of a specific artist
-    def get_artist_albums(self, db: Session, artist_id: int) -> List[AlbumSchema]:
+    def get_all_artist_albums(self, db: Session, artist_id: int) -> List[AlbumSchema]:
 
         artist_albums: List[AlbumSchema] = db.query(AlbumModel).filter(AlbumModel.ArtistId == artist_id).all()
 
@@ -31,6 +31,6 @@ class ArtistRepository:
 
 
     # Get all the songs of a specific artist
-    def get_artist_tracks(self, db: Session, artist_id: int) -> List[TrackSchema]:
+    def get_all_artist_tracks(self, db: Session, artist_id: int) -> List[TrackSchema]:
         artist_tracks: List[TrackSchema] = db.query(TrackModel).join(AlbumModel, AlbumModel.AlbumId == TrackModel.AlbumId).join(ArtistModel, ArtistModel.ArtistId == AlbumModel.ArtistId).filter(ArtistModel.ArtistId == artist_id).all()
         return artist_tracks

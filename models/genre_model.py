@@ -10,4 +10,4 @@ class GenreModel(Base):
 
     GenreId = Column(Integer, primary_key=True)
     Name = Column(String)
-    Tracks = relationship('TrackModel', back_populates='GenreModel', lazy='joined')
+    Tracks = relationship('TrackModel', back_populates='Genre', lazy='joined')

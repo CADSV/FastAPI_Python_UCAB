@@ -11,4 +11,4 @@ class MediaTypeModel(Base):
 
     MediaTypeId = Column(Integer, primary_key=True)
     Name = Column(String)
-    Tracks = relationship('TrackModel', back_populates='MediaTypeModel', lazy='joined')
+    Tracks = relationship('TrackModel', back_populates='MediaType', lazy='joined')

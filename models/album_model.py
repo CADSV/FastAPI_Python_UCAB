@@ -11,6 +11,6 @@ class AlbumModel(Base):
 
     AlbumId = Column(Integer, primary_key=True)
     Title = Column(String)
-    ArtistId = Column(Integer, ForeignKey('Artist.ArtistId'))
-    Artist = relationship('ArtistModel', back_populates='AlbumModel', lazy='joined')
-    Tracks = relationship('TrackModel', back_populates='AlbumModel', lazy='joined')
+    ArtistId = Column(Integer, ForeignKey('artists.ArtistId'))
+    Artist = relationship('ArtistModel', back_populates='Albums', lazy='joined')
+    Tracks = relationship('TrackModel', back_populates='Album', lazy='joined')

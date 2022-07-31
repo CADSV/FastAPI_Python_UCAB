@@ -11,4 +11,4 @@ class ArtistModel(Base):
 
     ArtistId = Column(Integer, primary_key=True)
     Name = Column(String)
-    Albums = relationship('AlbumModel', back_populates='ArtistModel', lazy='joined')
+    Albums = relationship('AlbumModel', back_populates='Artist', lazy='joined')
