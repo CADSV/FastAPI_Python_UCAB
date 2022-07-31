@@ -1,18 +1,18 @@
 # Project Imports
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-# from config_db import Base, engine
+from config_db import Base, engine
 
 
 # get_application: returns a FastAPI application
 def get_application()  -> FastAPI:
     
-    # To automap the database tables
-    # Base.metadata.create_all(bind=engine)
+    # To create the Database 
+    Base.metadata.create_all(bind=engine)
 
     # To create a FastAPI application
     app = FastAPI(
-        title="API Music Store",
+        title="API Music Store - Chinook",
         description="Python Project made by Carlos Doffiny S-V",
         version="1.0.0",
         openapi_url="/api/openapi.json",

@@ -35,9 +35,6 @@ class TrackSchema(BaseModel):
 
 
 class TrackInfoSchema(BaseModel):
-    """
-    Track Info Schema
-    """
 
     Name: Optional[str]
     Composer: Optional[str]
