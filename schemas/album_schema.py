@@ -25,17 +25,3 @@ class AlbumSchema(BaseModel):
                 }
             }
         }
-
-
-# Album Name Schema: Use for the Album Name
-class AlbumTitleSchema(BaseModel):
-
-    Title: Optional[str]
-
-    class Config:
-        orm_mode = True
-        schema_extra = {
-            "example": {
-                "Title": "The 20/20 Experience"
-            }
-        }
