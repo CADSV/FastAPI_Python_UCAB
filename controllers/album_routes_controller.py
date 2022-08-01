@@ -11,7 +11,7 @@ router = APIRouter(
     tags=["Albums"]
 )
 
-# 
+# To get the list of songs from a specific album
 @router.get("/albums/{id}/", response_model=List[TrackSchema], status_code=status.HTTP_200_OK)
 def get_track_list(
     id: int,
