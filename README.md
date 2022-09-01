@@ -3,6 +3,7 @@ Segundo proyecto de la materia de Python, para la carrera de Ingeniería Inform�
 
 
 ## Descripción
+
 Utilizando la base de datos de demostración que tiene SQLite, la cual contiene datos de una aplicación de un sitio de música ficticio se desea hacer una prueba de concepto para un sitio real. El dueño de la tienda real quiere construir una aplicación para lo cual contrata un equipo de desarrollo del cual usted forma parte. Su función en el equipo es la del desarrollo del backend. En una primera fase se requiere que el API exponga algunos endpoints con la finalidad de ir haciendo la prueba de concepto. Es así que el API va a ser bastante sencillo y no tendrá funcionalidad de seguridad, en otras palabras no requiere que tenga funciones de chequeo de usuario y password, ni emisión de jwt o verificación usando Oauth2.
 
 ## Instrucciones
